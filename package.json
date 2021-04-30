@@ -1,7 +1,7 @@
 {
     "name": "paste-indent",
     "publisher": "lesgrieve",
-    "displayName": "paste_and_indent",
+    "displayName": "paste-indent",
     "description": "Paste text following indent of current line.",
     "repository": "https://github.com/lesgrieve/paste-indent",
     "version": "0.0.1",
@@ -19,7 +19,7 @@
         "commands": [
             {
                 "command": "extension.paste-indent",
-                "title": "paste_and_indent"
+                "title": "paste-indent"
             }
         ]
     },

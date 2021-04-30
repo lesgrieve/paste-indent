@@ -35,12 +35,6 @@ let handle_selection = (editor: vscode.TextEditor, builder: vscode.TextEditorEdi
     }
     let new_content = lines.shift();
     if (new_content || new_content == '') {
-        // remove a last blank line
-        // there is almost always going to be a newline that ends up
-        // by itself
-        if (lines.length > 0 && lines[lines.length - 1].match(leading_whitespace_regex)) {
-            lines.pop();
-        }
         lines = lines.map(line => { return line_prefix + line.substring(dedent.length); });
         lines.unshift(new_content.substring(dedent.length));
         new_content = lines.join('\n');

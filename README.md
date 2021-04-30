@@ -14,11 +14,11 @@ paste-and-indent by partkyle
 Paste with Indent by anhnhoktvn
     Reformats
 ```
-paste-and-indent was the superior extension, so I decided to solve the small problem I had with it. The content I wish to paste often begins with one or more blank lines. The result with paste-and-indent was that nothing would be pasted. With paste_and_indent, content beginning with blank lines is pasted and content is left justified. Huge thanks to partkyle for preparing this valuable extension.
+paste-and-indent was the superior extension, so I decided to solve the small problem I had with it. The content I wish to paste often begins with one or more blank lines. The result with paste-and-indent was that nothing would be pasted. With paste-indent, content beginning with blank lines is pasted and content is left justified. Huge thanks to partkyle for preparing this valuable extension.
 
 ## Features
 
-Provides a command palette item named paste_and_indent that will paste text following the indentation of the current line. The pasted block is left justified within within the indentation.
+Provides a command palette item named paste-indent that will paste text following the indentation of the current line. The pasted block is left justified within within the indentation.
 
 It is multi-select safe.
 
@@ -38,6 +38,6 @@ This extension has not been tested with combinations of tab characters and space
 
 ## Release Notes
 
-### 0.1.0
+### 0.0.1
 
-Initial release of paste_and_indent.
+Initial release of paste-indent.
