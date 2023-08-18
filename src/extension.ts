@@ -52,16 +52,31 @@ let paste_and_indent = () => {
         let myedit = editor;
 
         vscode.env.clipboard.readText().then(content => {
-            myedit.edit((builder: vscode.TextEditorEdit) => {
-                myedit.selections.forEach(selection => {
+            let lines = content.split('\n');
+            let edit: Thenable<boolean>;
+
+            // Check for multi-selections special case
+            if (lines.length === myedit.selections.length) {
+                // Handle each selection separately
+                edit = myedit.edit((builder: vscode.TextEditorEdit) => {
+                    for (let i = 0; i < myedit.selections.length; i++) {
+                        handle_selection(myedit, builder, myedit.selections[i], lines[i]);
+                    }
+                })
+            } else {
+                // Existing behavior
+                edit = myedit.edit((builder: vscode.TextEditorEdit) => {
+                  myedit.selections.forEach((selection) => {
                     handle_selection(myedit, builder, selection, content);
+                  });
                 });
-            }).then(success => {
-                if (success) {
-                    myedit.selections = myedit.selections.map(selection => {
-                        return new vscode.Selection(selection.end, selection.end);
-                    });
-                }
+            }
+            edit.then((success) => {
+              if (success) {
+                myedit.selections = myedit.selections.map((selection) => {
+                  return new vscode.Selection(selection.end, selection.end);
+                });
+              }
             });
         });
     }
