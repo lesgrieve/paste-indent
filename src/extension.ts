@@ -64,7 +64,7 @@ let paste_and_indent = () => {
                     }
                 })
             } else {
-                // Existing behavior
+                // Single region behavior
                 edit = myedit.edit((builder: vscode.TextEditorEdit) => {
                   myedit.selections.forEach((selection) => {
                     handle_selection(myedit, builder, selection, content);

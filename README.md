@@ -36,6 +36,6 @@ This extension has not been tested with combinations of tab characters and space
 
 ## Release Notes
 
-### 0.0.2
+### [0.0.3]
 
-Issues-2 Fix remote execution.
+Issue-1 Fix multi-region paste-indent.
