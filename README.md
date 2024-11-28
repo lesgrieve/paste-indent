@@ -21,6 +21,15 @@ paste-and-indent was the superior extension, so I decided to solve the small pro
 Provides a command palette item named paste-indent that will paste text following the indentation of the current line. The pasted block is left justified within the indentation.
 
 There are no keybindings set, but you can set them yourself. I suggest mapping "cmd+shift+v" to the paste-indent command.
+On macOs, I have ~/Library/Application Support/Code/User/keybindings.json
+```
+    {
+        "key": "ctrl+cmd+v",
+        "command": "extension.paste-indent"
+    },
+```
+I set this through VSCode menu Settings... -> Keyboard Shortcuts, then searched for paste-indent. Edit Keybinding and set ctrl+cmd+v.
+
 
 ## Requirements
 
@@ -36,6 +45,6 @@ This extension has not been tested with combinations of tab characters and space
 
 ## Release Notes
 
-### [0.0.3]
+### [0.0.4]
 
-Issue-1 Fix multi-region paste-indent.
+- Improve keybinding instructions.

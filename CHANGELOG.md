@@ -4,6 +4,10 @@ All notable changes to the "paste-indent" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.4] - 2023-08-18
+
+- Improve keybinding instructions.
+
 ## [0.0.3] - 2023-08-18
 
 - Issue-1 Fix multi-region paste-indent.
