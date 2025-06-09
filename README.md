@@ -20,7 +20,7 @@ paste-and-indent was the superior extension, so I decided to solve the small pro
 
 Provides a command palette item named paste-indent that will paste text following the indentation of the current line. The pasted block is left justified within the indentation.
 
-There are no keybindings set, but you can set them yourself. I suggest mapping "cmd+shift+v" to the paste-indent command.
+There are no keybindings set, but you can set them yourself. I suggest mapping "ctrl+cmd+v" to the paste-indent command.
 On macOs, I have ~/Library/Application Support/Code/User/keybindings.json
 ```
     {
