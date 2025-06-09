@@ -45,6 +45,7 @@ This extension has not been tested with combinations of tab characters and space
 
 ## Release Notes
 
-### [0.0.4]
+### [0.0.5] - 2025-06-09
 
-- Improve keybinding instructions.
+- Fix keybinding typo in README.md
+
