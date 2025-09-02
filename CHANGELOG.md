@@ -4,6 +4,10 @@ All notable changes to the "paste-indent" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.6] - 2025-09-02
+
+- Issue-9 Fix Handle Windows line endings ("\r\n") with multiple cursors.
+
 ## [0.0.5] - 2025-06-09
 
 - Fix keybinding typo in README.md

@@ -25,10 +25,16 @@ On macOs, I have ~/Library/Application Support/Code/User/keybindings.json
 ```
     {
         "key": "ctrl+cmd+v",
-        "command": "extension.paste-indent"
+        "command": "extension.paste-indent",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+cmd+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "!editorTextFocus"
     },
 ```
-I set this through VSCode menu Settings... -> Keyboard Shortcuts, then searched for paste-indent. Edit Keybinding and set ctrl+cmd+v.
+An alternate way to map a shortcut key is through VSCode menu Settings... -> Keyboard Shortcuts, search for paste-indent. Edit Keybinding and set ctrl+cmd+v.
 
 
 ## Requirements
@@ -41,11 +47,11 @@ None
 
 ## Known Issues
 
-This extension has not been tested with combinations of tab characters and spaces, there may be pitfalls.
+None
 
 ## Release Notes
 
-### [0.0.5] - 2025-06-09
+### [0.0.6] - 2025-09-02
 
-- Fix keybinding typo in README.md
+- Issue-9 Fix Handle Windows line endings ("\r\n") with multiple cursors.
 

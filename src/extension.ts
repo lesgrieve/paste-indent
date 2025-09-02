@@ -52,7 +52,7 @@ let paste_and_indent = () => {
         let myedit = editor;
 
         vscode.env.clipboard.readText().then(content => {
-            let lines = content.split('\n');
+            let lines = content.split(/\r?\n/);
             let edit: Thenable<boolean>;
 
             // Check for multi-selections special case
